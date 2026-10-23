@@ -35,15 +35,16 @@
 
     <h2>What stays on your device</h2>
     <ul>
-      <li><strong>Your settings.</strong> The sizes you check, custom sizes you add, and the light/dark and background-tab toggles are saved with Chrome's storage. If Chrome sync is on, Chrome syncs them between your own devices.</li>
+      <li><strong>Your settings.</strong> The sizes you check, custom sizes you add, the light/dark and background-tab toggles, and where you put the focus marker and the Reset button are saved with Chrome's storage. If Chrome sync is on, Chrome syncs them between your own devices.</li>
+      <li><strong>Live preview.</strong> While the popup is open, Catches takes a picture of the visible part of the current tab about twice a second and shows it in the popup, so you can choose what stays centered. The preview exists only while the popup is open. It is never saved to disk or sent anywhere.</li>
       <li><strong>Captured images.</strong> Screenshots are made in your browser and saved as a ZIP file in your Downloads folder. They are never uploaded anywhere.</li>
       <li><strong>Capture status.</strong> While a save is running, its progress and result are kept in temporary browser storage so the popup can show them. This is cleared when you close the browser.</li>
     </ul>
 
     <h2>How the permissions are used</h2>
     <ul>
-      <li><strong>Debugger:</strong> attaches to the tab only while it is being captured, to resize the page to each selected size, switch between light and dark mode, and take the screenshot. To decide whether a site has its own dark design, it reads only the page's address and its background and text colors. Page content is not collected, stored or sent.</li>
-      <li><strong>Active tab:</strong> reads the address of the tab where you clicked Catches, so it can be opened in a background tab.</li>
+      <li><strong>Debugger:</strong> attaches to the tab only while it is being captured, to resize the page to each selected size, switch between light and dark mode, scroll the part you chose into the center, and take the screenshot. To do this it reads only the page's address, the position of the element under your marker, scroll positions, and background and text colors. Page content is not collected, stored or sent.</li>
+      <li><strong>Active tab:</strong> while the popup is open, reads the address of the current tab so it can be opened in a background tab, and takes the live preview described above.</li>
       <li><strong>Downloads:</strong> saves the ZIP file and opens its folder when you ask. The download bubble is hidden for the moment the ZIP is saved.</li>
       <li><strong>Storage and offscreen:</strong> keep your settings and build the ZIP file inside the browser.</li>
     </ul>
